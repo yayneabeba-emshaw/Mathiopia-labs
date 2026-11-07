@@ -1,0 +1,1128 @@
+/* ==============================
+   1. GLOBAL STYLES
+============================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: white;
+  background-color: #050505;
+  font-family: "Inter", Arial, sans-serif;
+  line-height: 1.6;
+
+  /* Large and small background grids */
+  background-image:
+    linear-gradient(to right, #252525 1px, transparent 1px),
+    linear-gradient(to bottom, #252525 1px, transparent 1px),
+    linear-gradient(to right, #181818 1px, transparent 1px),
+    linear-gradient(to bottom, #181818 1px, transparent 1px);
+
+  background-size:
+    120px 120px,
+    120px 120px,
+    30px 30px,
+    30px 30px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: 100% inherit;
+  cursor: pointer;
+}
+button a {
+  display: inline-block;
+}
+
+/* ==============================
+   2. HEADER AND NAVIGATION
+============================== */
+header {
+  display: flex;
+  height: 9vh;
+  background-color: #050505;
+
+  gap: 20px;
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 10px;
+
+  margin-bottom: 75px;
+}
+.logo {
+  margin-left: 55px;
+  margin-right: 600px;
+}
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-right: 170px;
+}
+.logo span {
+  color: rgb(123, 166, 80);
+  font-size: 16px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  font-size: 18px;
+  margin-left: 100px;
+  margin-right: 10px;
+}
+.link-btn {
+  padding: 10px 16px;
+  background-color: rgb(4, 104, 71);
+  border: 1px solid #3b3b3b;
+  color: white;
+  transition: background-color 0.25s ease;
+  margin-left: 50px;
+  text-align: center;
+}
+.link-btn::after {
+  content: " →";
+}
+
+/* ==============================
+   3. SHARED SECTION LABELS
+============================== */
+
+.unortho,
+.text,
+.seri,
+.labs,
+.belief,
+.build,
+.mathi,
+.what,
+.title,
+.get {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin: 0px 0px 60px 50px;
+}
+
+.unortho p,
+.text p,
+.seri p,
+.labs p,
+.belief p,
+.build p,
+.mathi p,
+.what p,
+.title p,
+.get p {
+  margin: 0;
+  color: rgba(11, 218, 149, 0.388);
+  font-family: inter, Arial, sans-serif;
+  font-size: 13px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.unortho button,
+.text button,
+.seri button,
+.labs button,
+.belief button,
+.build button,
+.mathi button,
+.what button,
+.title button,
+.get button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 35px;
+  height: 30px;
+  flex-shrink: 0;
+
+  background: transparent;
+  border: none;
+  margin: 2px 0px;
+}
+
+.unortho span,
+.text span,
+.seri span,
+.labs span,
+.belief span,
+.build span,
+.mathi span,
+.what span,
+.title span,
+.get span {
+  display: block;
+  width: 50px;
+  height: 1px;
+  padding: 0;
+  background-color: rgba(5, 244, 164, 0.811);
+}
+
+/* ==============================
+   4. HERO SECTION
+============================== */
+
+.hero,
+.about,
+.product {
+  width: min(900px, 87%);
+  min-height: 590px;
+  margin: 0px 60px;
+}
+
+.hero-title h1,
+.about-title h1,
+.product h1,.contact h1{
+  margin: 0 0 25px;
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: 5.19em;
+  color: rgba(255, 255, 255, 0.76);
+  transform: scaleY(1.15);
+
+  letter-spacing: 1.7px;
+}
+.product h1 {
+  line-height: 0.9;
+  transform: scaleY(1);
+}
+
+.hero-title h2,
+.about-title h2,
+.product h2 {
+  margin: 0 0 30px;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: 5em;
+  font-weight: 400;
+  line-height: 1;
+  font-style: oblique;
+}
+
+.hero-title p,
+.product .par p,
+.about-title p,.contact .par p {
+  width: min(550px, 100%);
+
+  color: #c4c4c4;
+  font-size: 20px;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  margin-bottom: 40px;
+}
+
+/* ==============================
+   5. HERO BUTTONS
+============================== */
+.button {
+  display: flex;
+
+  flex-wrap: wrap;
+  gap: 1px;
+}
+
+.hero .btn {
+  width: 185px;
+  height: 58px;
+  padding: 20px 15px;
+  background-color: rgb(4, 104, 71);
+
+  border: 1px solid rgb(4, 104, 71);
+}
+.hero button a {
+  color: rgb(222, 215, 215);
+  font-size: 17px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.hero button a::after {
+  content: " →";
+}
+.hero .btn:hover {
+  transform: translateY(-2px);
+}
+.hero button :hover {
+  opacity: 1;
+  color: white;
+}
+.hero .bttn {
+  width: 185px;
+  height: 58px;
+  padding: 20px 15px;
+  background-color: inherit;
+  margin-left: 20px;
+  border: 1px solid rgb(58, 57, 57);
+}
+
+/* ==============================
+   6. WHAT WE BUILD SECTION
+============================== */
+
+.hero-texts {
+  padding: 65px 0 80px;
+  background-color: #131212;
+  min-height: 100vh;
+  border: 1px solid #353535;
+}
+
+.hero-text {
+  width: 85%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.text {
+  margin: 0 0 25px;
+}
+
+.hero-text h3 {
+  margin: 0 0 55px;
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: clamp(36px, 4.5vw, 60px);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+.texts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: 250px;
+
+  background-color: #151414;
+  border: 1px solid #302c2c;
+ 
+  
+}
+
+.texts .operate,
+.texts .engine,
+.texts .design,
+.texts.enginer,
+.texts.complete,
+.texts.unorthodox {
+ 
+
+  border: 1px solid #302c2c;
+  transition: background-color 0.25s ease;
+  
+}
+.enginer,
+.complete,
+.unorthodox{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+  border:1px solid rgb(26, 24, 24);
+}
+
+.texts .design {
+  border-right: none;
+}
+
+.operate:hover,
+.engine:hover,
+.design:hover,
+.enginer:hover,
+.complete:hover,
+.unorthodox:hover {
+  background-color:#2c2b2b79;
+}
+
+.texts p:first-child {
+  color: #8a8a8a;
+  font-size: 14px;
+}
+
+.texts h4 {
+  margin: 25px 0 15px;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.texts p:not(:first-child) {
+  color: #b7b7b7;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ==============================
+   7. SERIES LABEL
+============================== */
+
+.seri {
+  padding: 50px 6.5%;
+  background-color: #050505;
+}
+
+/* ==============================
+   8. PRODUCT SHOWCASE
+============================== */
+
+.infoss {
+  padding: 0 0 80px;
+  background-color: #050505;
+}
+
+.info,
+.infs .info {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(260px, 0.8fr);
+  gap: 2px;
+
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.infos,
+.others {
+  min-width: 0;
+  padding: 35px;
+  border: 1px solid #302c2c;
+  background-color: #0d0b0b;
+}
+
+.infos .title {
+  margin-top: 0;
+  color: #075b40;
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.description {
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: clamp(32px, 3.5vw, 48px);
+  line-height: 1.2;
+}
+
+.details {
+  color: #b8b8b8;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.pre {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: auto;
+  margin: 30px 0;
+  border-top: 1px solid #353232;
+  border-bottom: 1px solid #353232;
+}
+
+pre {
+  max-width: 100%;
+  margin: 20px 0;
+  color: #d0d0d0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+  line-height: 2;
+}
+
+.infos button {
+  padding: 12px 16px;
+  color: white;
+  background-color: transparent;
+  border: 1px solid #2a2a2a;
+}
+
+.btns {
+  width: 80px;
+  text-align: center;
+
+  height: 20px;
+  background-color: rgba(28, 158, 115, 0.3);
+  font-size: 10px;
+  transform: scaleY(1.1);
+  text-transform: uppercase;
+  color: #078960;
+
+  border: 1px solid;
+}
+.others .button {
+  width: 300px;
+  height: 50px;
+  padding: 10px 70px;
+
+  color: white;
+  background-color: #075b40;
+  border: 1px solid #2a2a2a;
+  transition: background-color 0.25s ease;
+}
+.others .button a {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+.others .button a::after {
+  content: " →";
+}
+.others {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  background-color: #232121;
+}
+
+.others h4 {
+  margin: 0;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #075b40;
+}
+
+.others p {
+  margin: 0;
+  color: #c4c4c4;
+}
+
+.others .price {
+  margin: 10px 0;
+  color: white;
+  font-size: 35px;
+}
+p.detail {
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: auto;
+}
+
+/* ==============================
+   9. FOOTER
+============================== */
+
+footer {
+  padding: 35px 5% 20px;
+  background-color: #111111;
+  border-top: 1px solid #353535;
+  height: 40vh;
+}
+
+.contact-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.footer p {
+  margin: 0 0 10px;
+  color: #858585cf;
+  font-size: 15px;
+}
+.footer .mati {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #bdbdbd;
+  text-transform: uppercase;
+}
+.footer .par {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #bdbdbd6b;
+}
+.mati span {
+  color: #7baa50;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.nav a {
+  color: #bdbdbd;
+  font-size: 14px;
+  transition: color 0.25s ease;
+}
+
+.nav a:hover {
+  color: #7baa50;
+}
+
+footer .copy {
+  margin: 0;
+  padding-top: 20px;
+  color: #eee9e93f;
+  font-size: 13px;
+  border-top: 1px solid #292929;
+  text-transform: capitalize;
+  letter-spacing: 1.5px;
+}
+
+/* ==============================
+   10. TABLET RESPONSIVENESS
+============================== */
+
+@media (max-width: 1000px) {
+  header {
+    gap: 20px;
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+
+  nav {
+    gap: 20px;
+  }
+
+  .hero {
+    min-height: 580px;
+  }
+
+  .hero-text {
+    width: 90%;
+  }
+
+  .texts .operate,
+  .texts .engine,
+  .texts .design {
+    padding: 22px;
+  }
+
+  .info {
+    width: 90%;
+    grid-template-columns: minmax(0, 1.4fr) minmax(220px, 0.8fr);
+  }
+
+  .infos,
+  .others {
+    padding: 25px;
+  }
+}
+
+/* ==============================
+   11. MOBILE RESPONSIVENESS
+============================== */
+
+@media (max-width: 700px) {
+  header {
+    min-height: auto;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px 5%;
+  }
+
+  .logo a {
+    font-size: 25px;
+  }
+
+  nav {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .link-btn {
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+
+  .unortho {
+    margin: 30px 5% 15px;
+  }
+
+  .unortho p,
+  .text p,
+  .seri p {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+
+  .hero {
+    width: 90%;
+    min-height: auto;
+    margin: 30px auto 80px;
+  }
+
+  .hero-title h1 {
+    font-size: clamp(38px, 9vw, 55px);
+  }
+
+  .hero-title h2 {
+    font-size: clamp(29px, 7vw, 42px);
+  }
+
+  .hero-title p {
+    font-size: 16px;
+  }
+
+  .button {
+    gap: 12px;
+  }
+
+  .hero .btn,
+  .hero .pro {
+    padding: 13px 14px;
+    font-size: 13px;
+  }
+
+  .hero-texts {
+    padding: 45px 0 55px;
+  }
+
+  .hero-text {
+    width: 90%;
+  }
+
+  .hero-text h3 {
+    margin-bottom: 30px;
+    font-size: 38px;
+  }
+
+  .texts {
+    grid-template-columns: 1fr;
+  }
+
+  .texts .operate,
+  .texts .engine,
+  .texts .design {
+    padding: 25px;
+    border-right: none;
+    border-bottom: 1px solid #302c2c;
+  }
+
+  .texts .design {
+    border-bottom: none;
+  }
+
+  .texts h4 {
+    margin-top: 15px;
+  }
+
+  .seri {
+    min-height: 130px;
+    padding: 35px 5%;
+  }
+
+  .infoss {
+    padding-bottom: 50px;
+  }
+
+  .info {
+    width: 90%;
+    grid-template-columns: 1fr;
+  }
+
+  .infos,
+  .others {
+    padding: 22px;
+  }
+
+  .description {
+    font-size: 35px;
+  }
+
+  .details {
+    font-size: 15px;
+  }
+
+  pre {
+    font-size: 10px;
+  }
+
+  .contact-footer {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .nav {
+    gap: 18px;
+  }
+
+  footer {
+    padding: 30px 5% 20px;
+  }
+}
+
+/* ==============================
+   12. SMALL MOBILE SCREENS
+============================== */
+
+@media (max-width: 380px) {
+  nav {
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .link-btn {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .hero .btn,
+  .hero .pro {
+    width: 100%;
+  }
+
+  .hero-text h3 {
+    font-size: 32px;
+  }
+
+  .infos,
+  .others {
+    padding: 17px;
+  }
+}
+.labs{
+  margin: 0 60px 40px ;
+}
+.labss{
+  height: 76vh;
+}
+.about-title{
+  line-height: 0.8;
+  margin-bottom: 0;
+}
+.our {
+  background-color: #050505;
+  min-height: 100vh;
+}
+.belief button,.mathi button
+ {
+  margin-left:95px;
+  margin-top: 120px;
+}
+.belief p,.mathi p{
+  margin-top: 120px;
+}
+.about-us p {
+  margin-left: 150px;
+  font-size: 20px;
+  width: min(750px, 87%);
+  color: #b7b7b7;
+  line-height: 2;
+}
+.about-text {
+  color: #b7b7b7;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  background-color: #111111;
+}
+.problem,
+.approach,
+.work {
+  display: grid;
+  gap:5px;
+  grid-template-columns: 2fr 5fr;
+  
+ 
+  width: min(1020px, 87%);
+  
+}
+
+.problem p,
+.approach p,
+.work p {
+  font-size: 18px;
+  width:min(800px, 87%);
+}
+.problem h3,
+.approach h3,
+.work h3 {
+  font-size: 30px;
+  color: #b7b7b7;
+  font-family: 'Times New Roman', Times, serif;
+}
+.problem,
+.approach {
+  border-bottom: 1px solid rgba(66, 65, 65, 0.481);
+  margin-left:150px;
+}
+.work {
+  margin-bottom: 150px;
+   margin-left:150px;
+}
+.hero-texts{
+  background-color:black;
+}
+.hold {
+  background-color:#131212;
+  height: 50vh;
+}
+.hold button{
+  margin-left:100px;
+}
+.hold button,
+.hold p {
+  margin-top: 70px;
+  
+}
+.hold .par {
+  margin-left: 150px;
+  font-size: 18px;
+  width: min(700px, 87%);
+  color: #b7b7b7;
+  margin-top: 50px;
+}
+.product .title span,
+.product .title button,
+.product .title p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.product-text {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 80%;
+  margin: 0px 145px;
+}
+.product-info {
+ background-color:#050505;
+  border: 1px solid #353535;
+  
+}
+
+.infs {
+  display: flex;
+ flex-direction: column;
+  gap: 3px;
+
+  padding: 0 0 80px;
+
+  margin-bottom: 100px;
+}
+.infs .info {
+  height: 70vh;
+  margin-top: 130px;
+  
+  
+}
+.infs .info .infos {
+  height: 100%;
+  overflow-y: auto;
+  padding: 30px;
+  border: 2px solid rgba(21, 14, 14, 0.816);
+  
+  background-color: #84808014;
+}
+infs .product-text {
+  margin-top: 0px;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  
+}
+.product-par {
+  border: 2px solid rgba(21, 14, 14, 0.816);
+  background-color: #84808014;
+
+}
+.product-par pre {
+  margin: 0 0px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 21px;
+  transform: scaleY(1.1);
+  font-family:'Times New Roman', Times, serif
+}
+.product-par span {
+  color:#078960;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+
+}
+.product-par p {
+  margin: 0;
+  padding: 10px 120px;
+  color: #b7b7b7;
+  font-size: 15px;
+  width: 115%;
+  
+}
+
+.product-par:hover {
+  background-color: #181717b0;
+}
+.product-infos {
+  background-color:#0d0b0b;
+}
+.get button,.get p {
+  margin-top: 100px;
+  font-size: 12px;
+transform:scaleY(1.2);
+  letter-spacing: 2.5px;
+  
+  
+}
+.get button {
+ margin-left: 90px;
+ 
+
+}
+.gets h2{
+ 
+  margin-left: 140px;
+  font-size: 55px;
+  font-weight: 400;
+  transform: scaleY(1);
+  font-family: 'Times New Roman', Times, serif;
+}
+.gets h2 span {
+  color:rgba(255, 255, 255, 0.716);
+font-style:oblique
+}
+.pro {
+  display: grid;
+  grid-template-rows: 1.5fr 1fr;
+  width: 80%;
+  margin: 0px 145px;
+}
+.pro-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+
+  border: 1px solid rgba(36, 26, 26, 0.816);
+}
+.pdf,
+.txt,
+.notion,
+.company {
+  border: 1px solid rgba(39, 35, 35, 0.816);
+  background-color:#181818;
+  padding: 15px 40px
+  
+}
+.company{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.contacts {
+  background-color: #0f0e0eea;
+  height: 90vh;
+}
+.pdf p,
+.txt p,
+.notion p,
+.company p{
+  color: #078960a2;
+  font-size: 12px;
+}
+.gets .pros{
+  color:white;
+  font-size: 15px;
+}
+.gets h3{
+  font-size:23px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+.gets .bt{
+  margin:50px 145px 150px 145px;
+  
+    padding: 17px 45px;
+  background-color: rgb(4, 104, 71);
+  border: 1px solid #3b3b3b;
+  color: white;
+  transition: background-color 0.25s ease;
+  text-transform: capitalize;
+ 
+  text-align: center;
+}
+.gets .bt::after{
+  content:" →";
+}
+.gets .bt:hover{
+  transform: translateY(-2px);
+}
+.contact .par{
+  margin-left:60px;
+  margin-top:0px;
+}
+.contac{
+  display: grid;
+  gap:1px;
+  grid-template-rows: 1fr 1fr;
+  margin:20px 150px
+}
+
+.contact-info {
+  margin-top: 150px;
+  display: flex;
+  border: 1px solid rgba(36, 26, 26, 0.816);
+  background-color:#0d0b0b;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+   
+}
+.email,
+.gumroad {
+  width: 606px;
+  height: 200px;
+
+  border: 1px solid rgba(36, 26, 26, 0.816);
+  background-color: #181818;
+  padding:20px 50px;
+}
+
+.email p,
+.gumroad p{
+  font-size:17px;
+  color:rgba(255, 255, 255, 0.647);
+}
+.email .pp,
+.gumroad .pp{
+ color:#1e6b45;
+  font-size: 12px;
+}
+
+.others-info {
+  display: grid;
+  margin-bottom: 150px;
+  grid-template-columns: repeat(3, 1fr);
+ 
+
+
+}
+.email:hover,
+.gumroad:hover {
+  background-color: #252525;
+}
+.partner,.new,.response{
+  border: 1px solid rgba(36, 26, 26, 0.816);
+  background-color: #181818;
+   padding: 20px 50px;
+}
